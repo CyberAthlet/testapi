@@ -1,4 +1,4 @@
-import uvicorn
+#import uvicorn
 from logstuff import FriendlyLog, debug, info, error, warning, critical
 from classes_procs import Model, DummyModel, DataHolder, Well, Xl
 from settings import SETTINGS
@@ -60,5 +60,5 @@ async def get_constr(ngdu_name: str):
         d = {'options':list(model.fullstats.keys())}
         raise HTTPException(status_code=404, detail=d)
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=5000, log_level="info")
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="127.0.0.1", port=5000, log_level="info")
